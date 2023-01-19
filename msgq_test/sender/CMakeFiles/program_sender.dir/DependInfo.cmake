@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/chj/workspace/msgq_test/sender/main_sender.c" "/home/chj/workspace/msgq_test/sender/CMakeFiles/program_sender.dir/main_sender.c.o"
+  "/workspaces/study_project/msgq_test/sender/main_sender.c" "/workspaces/study_project/msgq_test/sender/CMakeFiles/program_sender.dir/main_sender.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
