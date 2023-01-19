@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/gps_test.dir/main.cc.o -o gps_test   -L/home/chj/workspace/study_project/gps_test/lib  -Wl,-rpath,/home/chj/workspace/study_project/gps_test/lib -lgps 

@@ -1,0 +1,3 @@
+/home/chj/workspace/study_project/gps_test/CMakeFiles/rebuild_cache.dir
+/home/chj/workspace/study_project/gps_test/CMakeFiles/gps_test.dir
+/home/chj/workspace/study_project/gps_test/CMakeFiles/edit_cache.dir
