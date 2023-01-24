@@ -1,3 +1,0 @@
-/workspaces/study_project/msgq_test/sender/CMakeFiles/rebuild_cache.dir
-/workspaces/study_project/msgq_test/sender/CMakeFiles/edit_cache.dir
-/workspaces/study_project/msgq_test/sender/CMakeFiles/program_sender.dir
