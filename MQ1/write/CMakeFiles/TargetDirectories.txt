@@ -1,3 +1,0 @@
-/home/chj/workspace/study_project/MQ1/write/CMakeFiles/rebuild_cache.dir
-/home/chj/workspace/study_project/MQ1/write/CMakeFiles/wr.dir
-/home/chj/workspace/study_project/MQ1/write/CMakeFiles/edit_cache.dir
