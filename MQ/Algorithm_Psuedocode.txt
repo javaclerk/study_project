@@ -1,0 +1,462 @@
+SYSC4001A ASSIGNMENT 3
+----------------------------------------------------------------------------------------------
+
+AUTHOR
+----------------------------------------------------------------------------------------------
+
+Name: Jeremy Trendoff
+Student Number: 101160306
+
+If you have any questions, comments, or concerns, please 
+feel free to contact me at jeremytrendoff@cmail.carleton.ca.
+
+----------------------------------------------------------------------------------------------
+
+ALGORITHM DESCRIPTION
+----------------------------------------------------------------------------------------------
+
+To solve this assignment, I decided to implement an array_list to stor the numbers in the calculator.
+To implement the array_list, I created an array_list library with functions to create, destroy, append, 
+delete, etc. I then implemented a calculator model. This model holds the logic for all of the operations
+done on the calculator. Finally, I implemented the calculator and user processes. The user process sends a 
+command to the calculator, and the calculator sends the result of the command to the user. The puesdocode 
+for this solution can be found below, but I encourage you to look at the source code as well.
+
+----------------------------------------------------------------------------------------------
+
+PUESDOCODE OF THE ARRAY_LIST LIBRARY (array_list.c)
+----------------------------------------------------------------------------------------------
+
+typedef struct {
+    int     *elems;    // Pointer to backing array.
+    int     capacity;  // Maximum number of elements in the list.
+    int     size; 	   // Current number of elements in the list.
+} intlist_t;
+
+/* Construct a new, empty list, and return a pointer to it
+ * Parameter capacity is the # of elements that can be stored in the list.
+ * Terminate the program via assert if capacity is <= 0.
+ * Terminate the program via assert if memory for the list cannot be 
+ * allocated from the heap.
+ */
+intlist_t *intlist_construct(int capacity)
+{
+    allocate memory of size intlist_t.
+    set initial values.
+    return the list pointer.
+}
+
+/* Destroy the list pointed to by parameter list, deallocating all memory 
+ * that was allocated from the heap.
+ * Terminate the program via assert if list is NULL.
+ */
+void intlist_destroy(intlist_t *list)
+{
+    free the list and its backing array.
+}
+
+/* Print the list pointed to by parameter list to the console.
+ * Terminate the program via assert if list is NULL.
+ */
+void intlist_print(const intlist_t *list)
+{
+    print a [
+    For each element of the list,
+        print it out.
+    print a ]
+}
+
+/* Insert element at the end of the list pointed to by a parameter list, and return true.
+ * If the list is full, double the list's capacity before inserting the elemenet.
+ * Terminate the program via assert if list is NULL.
+ */
+_Bool intlist_append(intlist_t *list, int element)
+{
+    if the capacity is full,
+        increase the capacity
+    
+    add the new element
+    increase the size
+}
+
+/* Return the maximum number of integers that can be stored in the list 
+ * pointed to by parameter list.
+ * Terminate the program via assert if list is NULL.
+ */
+int intlist_capacity(const intlist_t *list)
+{
+    if the list is not NULL
+        return the capacity
+}
+
+/* Return the number of integers in the list pointed to by parameter list.
+ * Terminate the program via assert if list is NULL.
+ */
+int intlist_size(const intlist_t *list)
+{
+     if the list is not NULL
+        return the size
+}
+
+/* Return the element located at the specified index, in the list
+ * pointed to by parameter list. 
+ * Terminate the program via assert if list is NULL, 
+ * or if index is not in the range 0 .. intlist_size() - 1.
+ */
+int intlist_get(const intlist_t *list, int index)
+{
+    assert that the list is not null and the index is in bounds.
+    get the element at the current index
+}
+
+/* Store element at the specified index, in the list pointed to by 
+ * parameter list. Return the integer that was previously 
+ * stored at that index.
+ * Terminate the program via assert if list is NULL, 
+ * or if index is not in the range 0 .. intlist_size() - 1.
+ */
+int intlist_set(intlist_t *list, int index, int element)
+{
+    assert that the list is not null and the index is in bounds.
+    set the element at the index given.
+}
+
+/* Empty the list pointed to by parameter list.
+ * Memory allocated to the list is not freed, so the emptied list can 
+ * continue to be used.
+ * Terminate the program via assert if list is NULL.
+ */
+void intlist_removeall(intlist_t *list)
+{
+    assert that the list is not null.
+    loop through all elements and make them = 0
+    change size to be 0
+}
+
+/*
+ * Remove all instances of a given element. 
+ */
+void intlist_removeInstancesOf(intlist_t* list, int element)
+{
+    assert that the list is not null.
+    loop through all elements of the list.
+        if the current element is the element you want to remove
+            delete the index.
+}
+
+/* Return the index (position) of the first occurrence of an integer
+ * equal to target in the list pointed to by parameter list. 
+ * Return -1 if target is not in the list.
+ * Terminate the program via assert if list is NULL.
+ */
+int intlist_index(const intlist_t *list, int target)
+{
+     assert that the list is not null.
+     loop through the list until the element is found.
+     return the index of the element
+}
+
+/* Count the number of integers that are equal to target, in the list 
+ * pointed to by parameter list, and return that number.
+ * Terminate the program via assert if list is NULL.
+ */
+int intlist_count(const intlist_t *list, int target)
+{
+     assert that the list is not null.
+     count the instances of a given target.
+}
+
+/* Determine if an integer in the list pointed to by parameter list 
+ * is equal to target.
+ * Return true if target is in the list, otherwise return false.
+ * Terminate the program via assert if list is NULL.
+ */
+_Bool intlist_contains(const intlist_t *list, int target)
+{
+    assert the new capacity is greater than the old one.
+    assert that the space can be allocated.
+    increase the capacity.
+    copy the elements into a new list with the greater capacity.
+}
+
+/* Delete the integer at the specified position in the list pointed
+ * to by parameter list.
+ * Parameter index is the position of the integer that should be removed.
+ * Terminate the program via assert if list is NULL, or if index
+ * is not in the range 0 .. intlist_size() - 1.
+ */
+void intlist_delete(intlist_t *list, int index)
+{
+    assert that the list is not null and the index is in bounds.
+    set the index element to be 0.
+    move all elements forward in the array.
+    decrease the size by 1.
+}
+
+/*
+ * Sort a list with bubble sort.
+ */
+void intlist_sort(intlist_t *list)
+{
+    loop through the values of the list.
+        loop through the values of the list 
+            if an element is greater the the element immediately to its right
+                swap the elements
+}
+
+----------------------------------------------------------------------------------------------
+
+PUESDOCODE FOR THE MESSAGE QUEUE LIBRARY (message_queue.c)
+----------------------------------------------------------------------------------------------
+
+/**
+ * @brief Create a message queue object
+ * 
+ * @param key The key for the message queue.
+ * @return int, the message queue id.
+ */
+int create_message_queue(key_t key)
+{
+    create a message queue id using msgget.
+    return the id.
+}
+
+/**
+ * @brief Send message to message queue.
+ * 
+ * @param msgqid int, the message queue id.
+ * @param send_buffer void*, send_buffer
+ * @param message_size int, message size.
+ */
+void send_message(int msgqid, void *send_buffer, int message_size)
+{
+    send a message using msgsnd.
+}
+
+/**
+ * @brief Receive message from message queue.
+ * 
+ * @param msgqid  int, the message queue id.
+ * @param receive_buffer void*, the receive buffer.
+ * @param message_size int, message size.
+ * @param message_type int, message type.
+ */
+void receive_message(int msgqid, void *receive_buffer, int message_size, int message_type, int msg_flg)
+{
+    receive a message using msgrcv.
+}
+
+/**
+ * @brief Delete message queue
+ * @param msgqid int, the message queue id.
+ */
+void delete_message_queue(int msgqid) 
+{
+    delete message queue using msgctl.
+}
+
+----------------------------------------------------------------------------------------------
+
+PUESDOCODE FOR THE CALCULATOR MODEL (calculator_model.c)
+----------------------------------------------------------------------------------------------
+
+/**
+ * @brief Insert an integer into the calculator.
+ * 
+ * @param list      intlist_t, the list for the calculator.
+ * @param element   int, the element to add.
+ */
+void insertToCalculator(intlist_t *list, int element)
+{
+    append the element into the list.
+}
+
+/**
+ * @brief Remove all instances of the specified element in the calculator.
+ * 
+ * @param list      intlist_t, the list for the calculator.
+ * @param element   int, the element to remove.
+ */
+void deleteFromCalculator(intlist_t *list, int element)
+{
+    remove instances of element from list.
+}
+
+/**
+ * @brief Calculate the average of the numbers in the calculator.
+ * 
+ * @param list  intlist_t, the list for the calculator.
+ * @return double  The average.
+ */
+double average(intlist_t *list) 
+{
+    add up the values in the list.
+    divide by the number of elements.
+    return that value.
+}
+
+/**
+ * @brief Add the numbers in the calculators up.
+ * 
+ * @param list intlist_t, the list for the calculator.
+ * @return int the added value.
+ */
+int add(intlist_t *list)
+{
+     add up the values in the list.
+     return that value.
+}
+
+/**
+ * @brief Get the min value in the calculator.
+ * 
+ * @param list intlist_t, the list for the calculator.
+ * @return int the min value.
+ */
+int min(intlist_t *list)
+{
+    loop through the elements
+    if the current element is less than the local minimum
+        set that value as the local minimum
+    return the local minimum.
+}
+
+/**
+ * @brief Get the max value in the calculator.
+ * 
+ * @param list intlist_t, the list for the calculator.
+ * @return int the max value.
+ */
+int max(intlist_t *list)
+{
+     loop through the elements
+    if the current element is less than the local max
+        set that value as the local max
+    return the local max.
+}
+
+/**
+ * @brief Get the median value or values from the calculator. 
+ * 
+ * @param list intlist_t, the list for the calculator.
+ * @return int* the median values.
+ */
+int* median(intlist_t *list)
+{
+    allocate an int array of size 2.
+    if there are an even number of elements, return the 2 middle numbers.
+    if there are an odd number of elements, return the 1 middle number.
+}
+
+----------------------------------------------------------------------------------------------
+
+PUESDOCODE FOR THE CALCULATOR PROCESS (calculator.c)
+----------------------------------------------------------------------------------------------
+
+#define MAX_TEXT 35 // The maximum characters that can be send through the buffer.
+
+/**
+ * @brief The message struct to send data to the user.
+ */
+typedef struct 
+{
+    long int my_msg_type; 
+    char some_text[MAX_TEXT]; 
+    double num; 
+    double median2; 
+} send_to_user;
+
+/**
+ * @brief The message struct to get data from the user.
+ */
+typedef struct
+{
+    long int my_msg_type;
+    char some_text[MAX_TEXT];
+} get_from_user;
+
+int main()
+{
+    Declare and assign initial values for message queue id's, message structs, the list, and the time calculations.
+
+    Create the message queues.
+
+    while the user wants the program to run
+    {
+        receive the message from the user from message queue 1.
+
+        print out the message from the user.
+
+        process the command
+            if insert -> insert the number to the calculator.
+            if delete -> delete number from calculator.
+            if sum -> get sum.
+            if average -> get average.
+            if min -> get min.
+            if median -> get median.
+            if end -> stop the while loop.
+            else -> command not valid.
+
+        send the result to the user through message queue 2.
+    }
+
+    calculate and print out average time.
+
+    destroy the list.
+    destroy the message queues.
+    exit process.
+}
+
+----------------------------------------------------------------------------------------------
+
+PUESDOCODE FOR THE USER PROCESS (user.c)
+----------------------------------------------------------------------------------------------
+
+#define MAX_TEXT 35 // The maximum characters that can be send through the buffer.
+
+/**
+ * @brief Message struct to send data to calculator.
+ */
+typedef struct 
+{
+    long int my_msg_type;
+    char some_text[MAX_TEXT];
+} send_to_calc;
+
+/**
+ * @brief Message struct to get data from calculator.
+ */
+typedef struct 
+{
+    long int my_msg_type;
+    char some_text[MAX_TEXT];
+    double num;
+    double median2;
+} get_from_calc;
+
+int main()
+{
+    Declare and assign initial values for message queue id's, message structs, and input.
+
+    Create the message queues.
+
+    while the user wants the program to run
+    {
+        get the command from the user.
+
+        process the command:
+            if end -> stop the loop.
+        
+        send the command to the calculator using message queue 1.
+        get the message from the calculator using message queue 2.
+
+        print out the resulting message.
+    }
+
+    exit the process.
+}  
+
+----------------------------------------------------------------------------------------------
+
+END OF FILE
+----------------------------------------------------------------------------------------------
