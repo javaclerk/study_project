@@ -1,10 +1,14 @@
-echo "led 1 (RUN)  Pattern 1"
-echo "if want end: ctrl + c"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-for((;;));
-do
+int led1_main(){
+printf("led 1 (RUN)  Pattern 1");
+printf("if want end: ctrl + c") ;
+
+for(;;);
   echo 1 > /sys/class/gpio/gpio491/value
-  sleep 0.4s
+  sleep 0.3s
   echo 0 > /sys/class/gpio/gpio491/value
   sleep 0.3s
   echo 1 > /sys/class/gpio/gpio491/value
@@ -29,4 +33,5 @@ do
   sleep 0.2s
   echo 1 > /sys/class/gpio/gpio491/value
   sleep 0.4s
-done
+  break;
+}
