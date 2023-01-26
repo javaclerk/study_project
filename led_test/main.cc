@@ -1,15 +1,10 @@
-#include <errno.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include "led.h"
+#include <iostream>
 
 
 int main(){
     printf("LED TEST MAIN\n");
+
+    if (class Pattern_1 == '1')
 
 
 }

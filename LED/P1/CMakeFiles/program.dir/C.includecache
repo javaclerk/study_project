@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chj/workspace/study_project/LED/P1/led1_p1.c
+
+/home/chj/workspace/study_project/LED/P1/led2_p1.c
+
+/home/chj/workspace/study_project/LED/P1/led3_p1.c
+
+/home/chj/workspace/study_project/LED/P1/led4_p1.c
+
+/home/chj/workspace/study_project/LED/P1/led5_p1.c
+

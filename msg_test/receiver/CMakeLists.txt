@@ -6,6 +6,6 @@ message(STATUS " - ID\t: ${CMAKE_CXX_COMPILER_ID}")
 message(STATUS " -Version\t: ${CMAKE_CXX_COMPILER_VERSION}")
 message(STATUS " - Path\t: ${CMAKE_CXX_COMPILER}")
 
-target_link_directories(${TARGET_APP} includes)
+target_include_directories(${TARGET_APP} PRIVATE includes)
 
 add_executable(program_receiver receiver.c)
