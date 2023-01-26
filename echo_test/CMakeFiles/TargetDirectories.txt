@@ -1,3 +1,0 @@
-/home/chj/workspace/study_project/echo_test/CMakeFiles/rebuild_cache.dir
-/home/chj/workspace/study_project/echo_test/CMakeFiles/program.dir
-/home/chj/workspace/study_project/echo_test/CMakeFiles/edit_cache.dir
