@@ -1,3 +1,0 @@
-/home/chj/workspace/study_project/LED/P1/CMakeFiles/rebuild_cache.dir
-/home/chj/workspace/study_project/LED/P1/CMakeFiles/program.dir
-/home/chj/workspace/study_project/LED/P1/CMakeFiles/edit_cache.dir
