@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chj/workspace/study_project/class/logic/blink.cpp
+Led.h
+/home/chj/workspace/study_project/class/logic/Led.h
+
+includes/Led.h
+iostream
+-
+

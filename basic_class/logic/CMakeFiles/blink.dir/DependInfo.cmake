@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chj/workspace/study_project/class/Led.cpp" "/home/chj/workspace/study_project/class/CMakeFiles/program.dir/Led.cpp.o"
-  "/home/chj/workspace/study_project/class/blink.cpp" "/home/chj/workspace/study_project/class/CMakeFiles/program.dir/blink.cpp.o"
+  "/home/chj/workspace/study_project/class/logic/blink.cpp" "/home/chj/workspace/study_project/class/logic/CMakeFiles/blink.dir/blink.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "includes"
   )
 
 # Targets to which this target links.
