@@ -1,12 +1,11 @@
-#include <iostream>
-#include <fstream>
+#include "led.h"
 
-#include "led_on.h"
-#include "led_off.h"
-#include "pattern1.h"
-#include "pattern2.h"
-#include "pattern3.h"
+Led::Led(int led)
+{
+    _led = led;
+}
 
-int main(){
-    
+void Led::blink()
+{
+    cout << "blink" << " " << _led << endl;
 }
