@@ -1,3 +1,0 @@
-/home/chj/workspace/study_project/msgq_test/receiver/CMakeFiles/rebuild_cache.dir
-/home/chj/workspace/study_project/msgq_test/receiver/CMakeFiles/program_receiver.dir
-/home/chj/workspace/study_project/msgq_test/receiver/CMakeFiles/edit_cache.dir

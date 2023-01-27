@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chj/workspace/study_project/class/Led.cpp
+Led.h
+/home/chj/workspace/study_project/class/Led.h
+
+/home/chj/workspace/study_project/class/Led.h
+iostream
+-
+
+/home/chj/workspace/study_project/class/blink.cpp
+Led.h
+/home/chj/workspace/study_project/class/Led.h
+

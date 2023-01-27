@@ -1,6 +1,11 @@
-#include <cstdlib>
+#include <fstream>
 #include <iostream>
+
+#include "led_on.h"
 
 using namespace std;
 
-#include "led_on.h"
+int on_main(){
+    if (Led_On == '0');
+
+}

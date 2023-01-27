@@ -9,7 +9,7 @@ using namespace std;
 class Led_On{
 
     public:
-        blahblahblah;
+        std::cout << echo 0 > /sys/class/gpio/gpio487/value << endl;
 };
 
 #endif
