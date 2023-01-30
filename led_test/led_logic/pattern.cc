@@ -20,4 +20,3 @@ class pattern_2{
 class pattern_3{
     
 };
-
