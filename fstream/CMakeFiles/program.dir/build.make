@@ -76,28 +76,29 @@ include CMakeFiles/program.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/program.dir/flags.make
 
-CMakeFiles/program.dir/out_led.cc.o: CMakeFiles/program.dir/flags.make
-CMakeFiles/program.dir/out_led.cc.o: out_led.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chj/workspace/study_project/fstream/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/out_led.cc.o"
-	/opt/fsl-imx-xwayland/4.14-thud/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/opt/fsl-imx-xwayland/4.14-thud/sysroots/aarch64-poky-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/out_led.cc.o -c /home/chj/workspace/study_project/fstream/out_led.cc
+CMakeFiles/program.dir/main.cc.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/main.cc.o: main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chj/workspace/study_project/fstream/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/main.cc.o"
+	/opt/fsl-imx-xwayland/4.14-thud/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/opt/fsl-imx-xwayland/4.14-thud/sysroots/aarch64-poky-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/main.cc.o -c /home/chj/workspace/study_project/fstream/main.cc
 
-CMakeFiles/program.dir/out_led.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/out_led.cc.i"
-	/opt/fsl-imx-xwayland/4.14-thud/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/opt/fsl-imx-xwayland/4.14-thud/sysroots/aarch64-poky-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chj/workspace/study_project/fstream/out_led.cc > CMakeFiles/program.dir/out_led.cc.i
+CMakeFiles/program.dir/main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/main.cc.i"
+	/opt/fsl-imx-xwayland/4.14-thud/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/opt/fsl-imx-xwayland/4.14-thud/sysroots/aarch64-poky-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chj/workspace/study_project/fstream/main.cc > CMakeFiles/program.dir/main.cc.i
 
-CMakeFiles/program.dir/out_led.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/out_led.cc.s"
-	/opt/fsl-imx-xwayland/4.14-thud/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/opt/fsl-imx-xwayland/4.14-thud/sysroots/aarch64-poky-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chj/workspace/study_project/fstream/out_led.cc -o CMakeFiles/program.dir/out_led.cc.s
+CMakeFiles/program.dir/main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/main.cc.s"
+	/opt/fsl-imx-xwayland/4.14-thud/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/opt/fsl-imx-xwayland/4.14-thud/sysroots/aarch64-poky-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chj/workspace/study_project/fstream/main.cc -o CMakeFiles/program.dir/main.cc.s
 
 # Object files for target program
 program_OBJECTS = \
-"CMakeFiles/program.dir/out_led.cc.o"
+"CMakeFiles/program.dir/main.cc.o"
 
 # External object files for target program
 program_EXTERNAL_OBJECTS =
 
-program: CMakeFiles/program.dir/out_led.cc.o
+program: CMakeFiles/program.dir/main.cc.o
 program: CMakeFiles/program.dir/build.make
+program: led_logic/liblogic.a
 program: CMakeFiles/program.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chj/workspace/study_project/fstream/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable program"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/program.dir/link.txt --verbose=$(VERBOSE)

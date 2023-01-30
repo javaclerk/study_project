@@ -4,8 +4,8 @@
 
 using namespace std;
 
-int v2x_led(){
-    std::ifstream in("/sys/class/gpio/gpio489/value");
+int pwr_led(){
+    std::ifstream in("/sys/class/gpio/gpio491/value");
     std::string s;
 
     if (in.is_open()) {

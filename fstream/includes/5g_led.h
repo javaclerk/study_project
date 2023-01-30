@@ -4,14 +4,15 @@
 
 using namespace std;
 
-int fiveg_main(){
-    string out_line;
-    ofstream out("/sys/class/gpio/gpio490/value");
-    for(int i=0;i<=1;i++){
-        cin>>out_line;
-        out<<out_line<<endl;
-    }
-out.close();
+int fiveg_led(){
+    std::ifstream in("/sys/class/gpio/gpio490/value");
+    std::string s;
 
-return 0;
+    if (in.is_open()) {
+        in >> s;
+        std::cout << " 점등 여부 (1 or 0) :: " << s << std::endl;
+    } else {
+        std::cout << "파일을 찾을 수 없습니다! " << std::endl;
+    }
+    return 0;
 }

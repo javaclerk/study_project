@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/program.dir/out_led.cc.o"
+  "CMakeFiles/program.dir/main.cc.o"
   "program"
   "program.pdb"
 )

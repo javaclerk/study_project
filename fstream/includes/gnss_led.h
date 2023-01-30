@@ -4,15 +4,15 @@
 
 using namespace std;
 
-int gnss_main(){
-    string out_line;
-    ofstream out("/sys/class/gpio/gpio487/value");
-    for(int i=0;i<=1;i++){
-        cin>>out_line;
-        out<<out_line<<endl;
+int gnss_led(){
+    std::ifstream in("/sys/class/gpio/gpio487/value");
+    std::string s;
+
+    if (in.is_open()) {
+        in >> s;
+        std::cout << " 점등 여부 (1 or 0) :: " << s << std::endl;
+    } else {
+        std::cout << "파일을 찾을 수 없습니다! " << std::endl;
     }
-
-out.close();
-
-return 0;
+    return 0;
 }

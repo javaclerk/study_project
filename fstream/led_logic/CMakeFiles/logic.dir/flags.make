@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/chj/workspace/study_project/fstream/includes
 
-CXX_FLAGS = -O2 -pipe -g -feliminate-unused-debug-types
+CXX_FLAGS = -O2 -pipe -g -feliminate-unused-debug-types -Wall -Werror
 

@@ -99,14 +99,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chj/workspace/study_project/fstream/CMakeFiles /home/chj/workspace/study_project/fstream//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/chj/workspace/study_project/fstream && $(CMAKE_COMMAND) -E cmake_progress_start /home/chj/workspace/study_project/fstream/CMakeFiles /home/chj/workspace/study_project/fstream/led_logic//CMakeFiles/progress.marks
+	cd /home/chj/workspace/study_project/fstream && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 led_logic/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/chj/workspace/study_project/fstream/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/chj/workspace/study_project/fstream && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 led_logic/clean
 .PHONY : clean
 
 # The main clean target
@@ -116,71 +116,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/chj/workspace/study_project/fstream && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 led_logic/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/chj/workspace/study_project/fstream && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 led_logic/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/chj/workspace/study_project/fstream && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named program
+# Convenience name for target.
+led_logic/CMakeFiles/logic.dir/rule:
+	cd /home/chj/workspace/study_project/fstream && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 led_logic/CMakeFiles/logic.dir/rule
+.PHONY : led_logic/CMakeFiles/logic.dir/rule
 
-# Build rule for target.
-program: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 program
-.PHONY : program
+# Convenience name for target.
+logic: led_logic/CMakeFiles/logic.dir/rule
 
-# fast build rule for target.
-program/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/build
-.PHONY : program/fast
-
-#=============================================================================
-# Target rules for targets named logic
-
-# Build rule for target.
-logic: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic
 .PHONY : logic
 
 # fast build rule for target.
 logic/fast:
-	$(MAKE) $(MAKESILENT) -f led_logic/CMakeFiles/logic.dir/build.make led_logic/CMakeFiles/logic.dir/build
+	cd /home/chj/workspace/study_project/fstream && $(MAKE) $(MAKESILENT) -f led_logic/CMakeFiles/logic.dir/build.make led_logic/CMakeFiles/logic.dir/build
 .PHONY : logic/fast
 
-main.o: main.cc.o
+logic.o: logic.cc.o
 
-.PHONY : main.o
+.PHONY : logic.o
 
 # target to build an object file
-main.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/main.cc.o
-.PHONY : main.cc.o
+logic.cc.o:
+	cd /home/chj/workspace/study_project/fstream && $(MAKE) $(MAKESILENT) -f led_logic/CMakeFiles/logic.dir/build.make led_logic/CMakeFiles/logic.dir/logic.cc.o
+.PHONY : logic.cc.o
 
-main.i: main.cc.i
+logic.i: logic.cc.i
 
-.PHONY : main.i
+.PHONY : logic.i
 
 # target to preprocess a source file
-main.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/main.cc.i
-.PHONY : main.cc.i
+logic.cc.i:
+	cd /home/chj/workspace/study_project/fstream && $(MAKE) $(MAKESILENT) -f led_logic/CMakeFiles/logic.dir/build.make led_logic/CMakeFiles/logic.dir/logic.cc.i
+.PHONY : logic.cc.i
 
-main.s: main.cc.s
+logic.s: logic.cc.s
 
-.PHONY : main.s
+.PHONY : logic.s
 
 # target to generate assembly for a file
-main.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/main.cc.s
-.PHONY : main.cc.s
+logic.cc.s:
+	cd /home/chj/workspace/study_project/fstream && $(MAKE) $(MAKESILENT) -f led_logic/CMakeFiles/logic.dir/build.make led_logic/CMakeFiles/logic.dir/logic.cc.s
+.PHONY : logic.cc.s
 
 # Help Target
 help:
@@ -191,10 +180,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... logic"
-	@echo "... program"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... logic.o"
+	@echo "... logic.i"
+	@echo "... logic.s"
 .PHONY : help
 
 
@@ -206,6 +194,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/chj/workspace/study_project/fstream && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

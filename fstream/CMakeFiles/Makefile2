@@ -73,32 +73,52 @@ CMAKE_BINARY_DIR = /home/chj/workspace/study_project/fstream
 
 # The main recursive "all" target.
 all: CMakeFiles/program.dir/all
+all: led_logic/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: led_logic/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/program.dir/clean
+clean: led_logic/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory led_logic
+
+# Recursive "all" directory target.
+led_logic/all: led_logic/CMakeFiles/logic.dir/all
+
+.PHONY : led_logic/all
+
+# Recursive "preinstall" directory target.
+led_logic/preinstall:
+
+.PHONY : led_logic/preinstall
+
+# Recursive "clean" directory target.
+led_logic/clean: led_logic/CMakeFiles/logic.dir/clean
+
+.PHONY : led_logic/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/program.dir
 
 # All Build rule for target.
-CMakeFiles/program.dir/all:
+CMakeFiles/program.dir/all: led_logic/CMakeFiles/logic.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chj/workspace/study_project/fstream/CMakeFiles --progress-num=1,2 "Built target program"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chj/workspace/study_project/fstream/CMakeFiles --progress-num=3,4 "Built target program"
 .PHONY : CMakeFiles/program.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/program.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chj/workspace/study_project/fstream/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chj/workspace/study_project/fstream/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/program.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/chj/workspace/study_project/fstream/CMakeFiles 0
 .PHONY : CMakeFiles/program.dir/rule
@@ -112,6 +132,33 @@ program: CMakeFiles/program.dir/rule
 CMakeFiles/program.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/clean
 .PHONY : CMakeFiles/program.dir/clean
+
+#=============================================================================
+# Target rules for target led_logic/CMakeFiles/logic.dir
+
+# All Build rule for target.
+led_logic/CMakeFiles/logic.dir/all:
+	$(MAKE) $(MAKESILENT) -f led_logic/CMakeFiles/logic.dir/build.make led_logic/CMakeFiles/logic.dir/depend
+	$(MAKE) $(MAKESILENT) -f led_logic/CMakeFiles/logic.dir/build.make led_logic/CMakeFiles/logic.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chj/workspace/study_project/fstream/CMakeFiles --progress-num=1,2 "Built target logic"
+.PHONY : led_logic/CMakeFiles/logic.dir/all
+
+# Build rule for subdir invocation for target.
+led_logic/CMakeFiles/logic.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chj/workspace/study_project/fstream/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 led_logic/CMakeFiles/logic.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chj/workspace/study_project/fstream/CMakeFiles 0
+.PHONY : led_logic/CMakeFiles/logic.dir/rule
+
+# Convenience name for target.
+logic: led_logic/CMakeFiles/logic.dir/rule
+
+.PHONY : logic
+
+# clean rule for target.
+led_logic/CMakeFiles/logic.dir/clean:
+	$(MAKE) $(MAKESILENT) -f led_logic/CMakeFiles/logic.dir/build.make led_logic/CMakeFiles/logic.dir/clean
+.PHONY : led_logic/CMakeFiles/logic.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

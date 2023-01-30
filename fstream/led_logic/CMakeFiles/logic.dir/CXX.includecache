@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chj/workspace/study_project/fstream/led_logic/logic.cc
+iostream
+-
+fstream
+-
+string
+-
+includes/led.h
+/home/chj/workspace/study_project/fstream/led_logic/includes/led.h
+
