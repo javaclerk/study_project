@@ -69,7 +69,7 @@ int main(){
             gnss_led.On();
         }
         else{
-            wave_led.Off();
+            gnss_led.Off();
         }
     }
 return 0;
