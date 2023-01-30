@@ -7,7 +7,6 @@ message(STATUS " - Version\t: ${CMAKE_CXX_COMPILER_VERSION}")
 message(STATUS " - Path\t: ${CMAKE_CXX_COMPILER}")
 
 
-
 add_executable (program main.cc)
-add_subdirectory(led_logic includes)
+add_subdirectory(pattern)
 target_link_libraries(program pattern)

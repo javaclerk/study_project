@@ -1,1 +1,0 @@
-./led1_p3.c & ./led2_p3.c & ./led3_p3.c & ./led4_p3.c & ./led5_p3.c 
