@@ -10,4 +10,6 @@ add_subdirectory(led_logic)
 
 add_executable (program main.cc)
 
-target_link_libraries(program logic)
+target_link_libraries(program pattern)
+
+target_link_directories(${TARGET_DIR} includes)

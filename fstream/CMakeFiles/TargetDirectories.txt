@@ -1,6 +1,0 @@
-/home/chj/workspace/study_project/fstream/CMakeFiles/rebuild_cache.dir
-/home/chj/workspace/study_project/fstream/CMakeFiles/program.dir
-/home/chj/workspace/study_project/fstream/CMakeFiles/edit_cache.dir
-/home/chj/workspace/study_project/fstream/led_logic/CMakeFiles/rebuild_cache.dir
-/home/chj/workspace/study_project/fstream/led_logic/CMakeFiles/logic.dir
-/home/chj/workspace/study_project/fstream/led_logic/CMakeFiles/edit_cache.dir

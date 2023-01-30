@@ -6,23 +6,46 @@
 
 using namespace std;
 
-int main(){
-    std::cout << "LED 제어 프로그램" << endl;
-    std::cout << "--------------------" << endl;
-
-    std::ifstream in("/sys/class/gpio/gpio490/value");
-    char buf[100];
-
-    if (!in.is_open()) {
-        std::cout << "파일을 찾을 수 없습니다!" << std::endl;
-        return 0;
-    }
-   
-        std::string s;
-    while (in) {
-        in.getline(buf, 100, '.');
-        std::cout << buf << std::endl;
+int led_all_on(){
+    std::ofstream out("/sys/class/gpio/gpio487/value");
+    
+    std::string s;
+        if(out.is_open())
+    {
+        out << "1";
     }
 
     return 0;
 }
+
+int led_all_off()
+{
+    std::ofstream out("/sys/class/gpio/gpio487/value");
+         std::string s;
+    if (out.is_open()) {
+        out << "0";
+    }
+
+    return 0;
+}
+
+int main(){
+    int num;
+
+    std::cout << "LED control Program" << endl;
+    std::cout << "--------------------" << endl;
+    std::cout << "Please Choose control pannel" << endl;
+    std::cin >> num;
+
+    if(num == 1){
+        led_all_on;
+    }
+    else if(num == 0){
+        led_all_off;
+    }
+
+    return 0;
+}
+
+
+
