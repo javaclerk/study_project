@@ -4,15 +4,17 @@
 
 using namespace std;
 
-int v2x_led(){
-   std::ifstream in("/sys/class/gpio/gpio489/value");
+int fiveg_led(){
+    std::ifstream in("/sys/class/gpio/gpio490/value");
     std::string s;
     char buf[100];
 
     if (in.is_open()) {
         in >> s;
         std::cout << " Lighting Status (1 or 0) :: " << s << std::endl;
-    } else {
+    } 
+    
+    else {
         std::cout << " File Has not Founded! " << std::endl;
     }
 
@@ -28,4 +30,3 @@ int v2x_led(){
 
     return 0;
 }
-

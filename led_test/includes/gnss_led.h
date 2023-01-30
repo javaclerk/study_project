@@ -4,15 +4,17 @@
 
 using namespace std;
 
-int wave_led(){
-std::ifstream in("/sys/class/gpio/gpio488/value");
+int gnss_led(){
+    std::ifstream in("/sys/class/gpio/gpio487/value");
     std::string s;
     char buf[100];
 
     if (in.is_open()) {
         in >> s;
         std::cout << " Lighting Status (1 or 0) :: " << s << std::endl;
-    } else {
+    }
+     
+    else {
         std::cout << " File Has not Founded! " << std::endl;
     }
 
@@ -28,3 +30,4 @@ std::ifstream in("/sys/class/gpio/gpio488/value");
 
     return 0;
 }
+

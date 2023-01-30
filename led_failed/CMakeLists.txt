@@ -6,10 +6,9 @@ message(STATUS " - ID\t: ${CMAKE_CXX_COMPILER_ID}")
 message(STATUS " - Version\t: ${CMAKE_CXX_COMPILER_VERSION}")
 message(STATUS " - Path\t: ${CMAKE_CXX_COMPILER}")
 
-add_subdirectory(led_logic)
+
+add_subdirectory(logic)
 
 add_executable (program main.cc)
 
-target_link_libraries(program pattern)
-
-target_link_directories(${TARGET_DIR} includes)
+target_link_libraries(program blink)
