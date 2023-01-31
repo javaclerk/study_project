@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chj/workspace/mq6/Writer/Writer.c
+stdio.h
+-
+sys/ipc.h
+-
+sys/msg.h
+-
+string.h
+-
+

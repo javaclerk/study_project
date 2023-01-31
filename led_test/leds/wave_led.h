@@ -27,3 +27,4 @@ void wave_led::Off(){
         out << "0";
     }
 }
+

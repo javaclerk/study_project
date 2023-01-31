@@ -20,8 +20,9 @@ int main(){
     std::cout << "--------------------" << endl;
     std::cout << "Please Choose control pannel" << endl;
     std::cout << "--------------------" << endl;
-    std::cout << "1.Power_LED 2.5G_LED 3.C-V2X_LED 4.WAVE_LED 5.GNSS_LED" << endl;
+    std::cout << "1.Power_LED 2.5G_LED 3.C-V2X_LED 4.WAVE_LED 5.GNSS_LED" "6.EXIT"<< endl;
     std::cin >> num;
+    
 
     if(num == 1){
         std::cout << "Power_LED" << endl;
@@ -78,5 +79,8 @@ int main(){
             gnss_led.Off();
         }
     }
-return 1;
+    else{
+        std::cout << "Invalid Command !!!" << endl;
+    }
+    return 0;
 }

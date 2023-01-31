@@ -1,0 +1,5 @@
+#include "5g_pattern.h"
+#include "gnss_pattern.h"
+#include "pwr_pattern.h"
+#include "v2x_pattern.h"
+#include "wave_pattern.h"
