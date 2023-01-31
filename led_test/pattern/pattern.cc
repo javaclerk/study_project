@@ -19,5 +19,7 @@ void pattern3();
 };
 
 void pattern1(){
-    
+
+
+
 }

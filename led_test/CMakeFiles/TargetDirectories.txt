@@ -1,6 +1,0 @@
-/home/chj/workspace/study_project/led_test/CMakeFiles/rebuild_cache.dir
-/home/chj/workspace/study_project/led_test/CMakeFiles/program.dir
-/home/chj/workspace/study_project/led_test/CMakeFiles/edit_cache.dir
-/home/chj/workspace/study_project/led_test/pattern/CMakeFiles/rebuild_cache.dir
-/home/chj/workspace/study_project/led_test/pattern/CMakeFiles/pattern.dir
-/home/chj/workspace/study_project/led_test/pattern/CMakeFiles/edit_cache.dir
